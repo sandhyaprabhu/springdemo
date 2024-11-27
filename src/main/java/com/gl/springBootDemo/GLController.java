@@ -23,7 +23,7 @@ public class GLController {
             @RequestParam (required = false) String middleName,
             @RequestParam (required = true) String lastName){
         if(firstName.isEmpty() || lastName.isEmpty()){
-            response.put("Error","First Name and Last Name is mandatorygit");
+            response.put("Error","First Name and Last Name is mandatory");
             return  ResponseEntity.status(HttpStatus.BAD_REQUEST).body(response);
            // return  ResponseEntity.status(HttpStatus.ACCEPTED).body(new ApiResponse("First Name Required"));
         }
